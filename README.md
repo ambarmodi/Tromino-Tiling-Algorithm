@@ -11,3 +11,11 @@ The output is represented as the below image:
 
 Here “digit” represents the regular tile cell and “X” represents a hole.
 The algorithm uses the Divide and Conquer technique and time complexity is O(n^2).
+
+# Instruction to execute:
+1. make                     (This will compile the program)
+2. ./tromino.out k hr hc    (Execute with K as board size and hr and hc as hole points)
+3. make clean .             (This deletes the executable)
+
+# Output:
+Filled Tromino tiling 
