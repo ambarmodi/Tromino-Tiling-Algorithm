@@ -1,12 +1,6 @@
 all: project2
 
-project2: strassen.out tromino.out
-	
-strassen.out: strassen.o
-	gcc -g strassen.o -o strassen.out
-
-strassen.o: strassen.c
-	gcc -g -c strassen.c -o strassen.o
+project2: tromino.out
 
 tromino.out: tromino.o
 	gcc -g tromino.o -o tromino.out
