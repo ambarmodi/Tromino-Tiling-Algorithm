@@ -85,6 +85,8 @@ int trominoTileRec(int n,int x,int y) {
 	trominoTileRec(n/2, x, y);
 	trominoTileRec(n/2, x+n/2, y);
 	trominoTileRec(n/2, x+n/2, y+n/2);
+	
+	return 0;
 
 }
 
