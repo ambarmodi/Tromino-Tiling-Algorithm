@@ -57,8 +57,8 @@ int trominoTileRec(int n,int x,int y) {
 		return 0;
 	}
 	//Search the hole's location
-	for(i=x;i<n;i++) {
-		for(j=y;j<n;j++){
+	for(i=x;i<x+n;i++) {
+		for(j=y;j<y+n;j++){
 			if(board[i][j]!=0) {
 				hr=i; hc=j;
 			}
