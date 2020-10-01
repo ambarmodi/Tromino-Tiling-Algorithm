@@ -4,8 +4,8 @@
 int ** board;
 int** createBoard(int,int,int);  
 void printBoard(int);
-void trominoTile(int);
-int trominoTileRec(int,int,int);
+void placeLtile(int);
+int placeLtileRec(int,int,int);
 int cnt=0;
 void putTromino(int,int,int,int,int,int);
 void freeMemory(int);
@@ -26,7 +26,7 @@ int main(int argc,char ** argv) {
 		size = 2*size;
 	}
 	board = createBoard(size,hr,hc);
-	trominoTile(size);
+	placeLtile(size);
 	printf("\n\n");
 	printBoard(size);
 	
@@ -37,14 +37,14 @@ int main(int argc,char ** argv) {
 /*
 * Wrapper class which calls trominoTileRec 
 */
-void trominoTile(int size) {
-  	trominoTileRec(size,0,0);
+void placeLtile(int size) {
+  	placeLtileRec(size,0,0);
 }
 
 /*
 * TrominoTile Recursive function
 */
-int trominoTileRec(int n,int x,int y) {
+int placeLtileRec(int n,int x,int y) {
 	int i,j,hr,hc;	
 	if(n == 2){
 		cnt++;
@@ -81,10 +81,10 @@ int trominoTileRec(int n,int x,int y) {
 	else if(hr >= x + n/2 && hc >= y + n/2) {
 		putTromino(x+(n/2) -1, y+ (n/2),x+(n/2),y+(n/2) -1,x+(n/2)-1,y+(n/2)-1);		
 	}
-	trominoTileRec(n/2, x, y+n/2);
-	trominoTileRec(n/2, x, y);
-	trominoTileRec(n/2, x+n/2, y);
-	trominoTileRec(n/2, x+n/2, y+n/2);
+	placeLtileRec(n/2, x, y+n/2);
+	placeLtileRec(n/2, x, y);
+	placeLtileRec(n/2, x+n/2, y);
+	placeLtileRec(n/2, x+n/2, y+n/2);
 	
 	return 0;
 
